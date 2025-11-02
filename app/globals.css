@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@theme inline {
+	--magnifier: 6;
+	--gap: 1vmin;
+	--transition: 0.5s;
+
+	--font-primary: var(--font-primary);
+	--font-secondary: var(--font-secondary);
+	--font-logo: var(--font-logo);
+	/*   --color-background: var(--background);
+  --color-foreground: var(--foreground); */
+	/*   --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+ */
+
+@layer components {
+	.split-section {
+		@apply py-20 w-full relative;
+	}
+	.split-section .inner-wrap {
+		@apply max-w-3xl lg:max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-16 px-8 lg:px-16;
+	}
+
+	.split-section .text-side {
+		@apply flex flex-col justify-center;
+	}
+
+    .split-section .text-side header {
+        @apply mb-6;
+
+        p {
+            @apply font-secondary mb-1  tracking-wider uppercase text-slate-500;
+        }
+
+        h2 {
+            @apply font-primary text-3xl md:text-4xl font-semibold tracking-tight;
+        }
+    }
+
+	.split-section  .gallery-container {
+		width: 100%;
+		height: 50vmin;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--gap);
+	}
+
+	.split-section  .gallery-image {
+		--brightness: 0.75;
+		--grayscale: 1;
+		transition: flex var(--transition), filter var(--transition);
+		height: 100%;
+		filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+		object-fit: cover;
+		overflow: hidden;
+		flex: 1;
+	}
+
+	.split-section  .gallery-image:hover {
+		--brightness: 1.15;
+		--grayscale: 0;
+		flex: var(--magnifier);
+	}
+}
+
+@layer utilities {
+	/* Simple reusable hexagon shape (flat-top) */
+	.clip-hexagon {
+		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+	}
+	.hexagon {
+		--b: 1px; /* adjust to control the border  */
+		height: 37px; /* adjust to control the size  */
+		aspect-ratio: cos(30deg);
+		clip-path: polygon(
+			50% 0,
+			-50% 50%,
+			50% 100%,
+			150% 50%,
+			50% 0,
+			50% var(--b),
+			calc(100% - var(--b) * sin(60deg)) calc(25% + var(--b) * cos(60deg)),
+			calc(100% - var(--b) * sin(60deg)) calc(75% - var(--b) * cos(60deg)),
+			50% calc(100% - var(--b)),
+			calc(var(--b) * sin(60deg)) calc(75% - var(--b) * cos(60deg)),
+			calc(var(--b) * sin(60deg)) calc(25% + var(--b) * cos(60deg)),
+			50% var(--b)
+		);
+		background: #0f172b;
+	}
+
+	.bg-dev,
+	.bg-dev * {
+		background-color: rgba(200, 0, 0, 0.25) !important;
+	}
+
+	.border-dev,
+	.border-dev * {
+		border: 1px solid rgba(0, 200, 0, 0.25) !important;
+	}
+
+	.b-x {
+		border: 1px solid rgba(0, 200, 0, 0.25) !important;
+	}
+
+	#products-showcase {
+		.gallery-container {
+			width: 100%;
+			height: 50vmin;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: var(--gap);
+		}
+
+		.gallery-image {
+			--brightness: 0.75;
+			--grayscale: 1;
+			transition: flex var(--transition), filter var(--transition);
+			height: 100%;
+			filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+			object-fit: cover;
+			overflow: hidden;
+			flex: 1;
+		}
+
+		.gallery-image:hover {
+			--brightness: 1.15;
+			--grayscale: 0;
+			flex: var(--magnifier);
+		}
+	}
+}
