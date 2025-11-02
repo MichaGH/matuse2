@@ -53,6 +53,10 @@ export default function GalleryClient({ groupedGalleryItems }) {
           </div>
         )}
 
+        {/* Thin divider */}
+        <div className="mt-8">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+        </div>
 
         {/* Grid */}
         <AnimatePresence mode="wait">

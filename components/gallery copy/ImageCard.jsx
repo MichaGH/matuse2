@@ -28,11 +28,19 @@ export default function ImageCard({ item, selectItem }) {
           src={src}
           alt={item?.alt || ""}
           fill
-          sizes="(min-width:1280px) 16vw, (min-width:1024px) 20vw, (m in-width:768px) 30vw, 50vw"
+          sizes="(min-width:1280px) 16vw, (min-width:1024px) 20vw, (min-width:768px) 30vw, 50vw"
           className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
           priority={false}
         />
 
+        {/* Subtle top label strip on hover */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-300">
+          <div className="flex items-center justify-between px-2 py-1 bg-white/85 border-b border-slate-200">
+            <span className="font-secondary text-[10px] tracking-wider uppercase text-slate-700 line-clamp-1">
+              {item?.alt || "Fotka"}
+            </span>
+          </div>
+        </div>
       </div>
     </motion.button>
   );
