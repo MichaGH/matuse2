@@ -21,19 +21,12 @@ export default function HomePage() {
 	return (
 		<main id="homepage" className="bg-white text-slate-900">
 			<HeroSection2 />
-			{/* <StatsStrip2 /> */}
-
 			<KovoShowcase2 />
-
-			{/* <StatsStrip /> */}
-
 			<Capabilities10 />
 			<HomepageGallery />
 			<Divider1 />
 			<ServicesFlow3 />
 			<ConstructionServices />
-			{/*       <Stepper />
-			<ServicesFlow /> */}
 		</main>
 	);
 }

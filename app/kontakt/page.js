@@ -25,7 +25,7 @@ export default function Page() {
                 Kontakt & Údaje
               </p>
               <h2 className="font-primary text-xl font-semibold tracking-tight mt-1">
-                Sme pripravení pomôcť
+                Ozvite sa nám
               </h2>
             </div>
 
@@ -260,10 +260,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Bottom hairline */}
-      <div className="mx-auto max-w-7xl px-6 pb-12">
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-      </div>
+
     </div>
   );
 }

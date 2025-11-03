@@ -1,6 +1,7 @@
 import { Inter, League_Spartan, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/UI/Navbar";
+import Footer from "@/components/UI/Footer";
 
 const primaryFont = Space_Grotesk({
   variable: "--font-primary",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

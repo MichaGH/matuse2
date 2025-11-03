@@ -26,7 +26,7 @@ export default function ProductsShowcase() {
       <div className="inner-wrap">
         {/* LEFT — header + copy */}
         <div className="text-side">
-          <SectionHeader eyebrow="Služby vo výrobe" title="Čo vyrábame" />
+          <SectionHeader eyebrow="Kovovýroba" title="Čo vyrábame" />
 
           <div className="content space-y-4 text-slate-800">
             Kusová aj sériová výroba na mieru:{' '}

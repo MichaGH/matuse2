@@ -15,7 +15,7 @@ const lineProps = {
 const navLinks = [
   { label: "Domov", href: "/" },
   { label: "Stavebníctvo", href: "/sluzby/stavebnictvo" },
-  { label: "Kovovýroba", href: "/sluzby/vyroba" },
+  { label: "Kovovýroba", href: "/sluzby/kovovyroba" },
   { label: "Galéria", href: "/galeria" },
   { label: "Kontakt", href: "/kontakt" },
 ];
