@@ -61,7 +61,7 @@ export default function ProductsShowcase() {
 
         {/* RIGHT — gallery (unchanged) */}
         <div className="img-side">
-          <div className="gallery-container flex flex-row w-3xl">
+          <div className="gallery-container flex flex-row max-w-3xl">
             {images.map(({ alt, src }, i) => (
               <div key={i} className="gallery-image">
                 <Image src={src} alt={alt} fill className="object-cover" />

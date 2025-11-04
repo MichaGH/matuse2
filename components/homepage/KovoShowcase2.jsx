@@ -22,7 +22,7 @@ export default function KovoShowcase2() {
                     <div className="grid grid-cols-3 gap-4 md:gap-6 lg:px-6">
                         <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 translate-y-4 md:translate-y-6">
                             <div className="absolute inset-0 border border-slate-200 bg-slate-50 overflow-hidden">
-                                <Image src="/images/drilling1.png" alt="Vŕtanie v dielni" fill className="object-cover" />
+                                <Image src="/images/strips/2.png" alt="Vŕtanie v dielni" fill className="object-cover object-center" />
                             </div>
                         </div>
                         <div className="relative h-64 sm:h-72 md:h-80 lg:h-96">
@@ -32,7 +32,7 @@ export default function KovoShowcase2() {
                         </div>
                         <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 -translate-y-4 md:-translate-y-6">
                             <div className="absolute inset-0 border border-slate-200 bg-slate-50 overflow-hidden">
-                                <Image src="/images/welder3.png" alt="Zváranie pri práci" fill className="object-cover" />
+                                <Image src="/images/strips/3.png" alt="Zváranie pri práci" fill className="object-cover" />
                             </div>
                         </div>
                     </div>
